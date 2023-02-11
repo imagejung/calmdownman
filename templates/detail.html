@@ -18,6 +18,7 @@
             src="https://kit.fontawesome.com/771f34c71f.js"
             crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="../static/css/total.css">
     <link rel="stylesheet" href="../static/css/detail.css">
     <title>상세페이지</title>
 </head>
@@ -25,13 +26,8 @@
 <body>
 <nav class="navbar">
     <div class="navbar_logo">
-        <button onclick="window.location.href='/'" type="button" class="btn btn-success" id="testest"><i
-                class="fas fa-book"></i> 홈
+        <button onclick="window.location.href='/index'" type="button" class="btn btn-success" id="testest"><i class="fa-solid fa-gamepad"></i> 홈
         </button>
-    </div>
-    <div class="delete">
-        <button id="ubutton" type="button" class="btn btn-outline-dark" onclick="update()">수정</button>
-        <button id="dbutton" type="button" class="btn btn-outline-dark" onclick="deletepage()">삭제</button>
     </div>
     <div id="num">{{ num }}</div>
 </nav>
@@ -45,15 +41,20 @@
                 {{ title }}
             </div>
         </div>
-    </div>
+        <div class="desc_text">
+            <div class="star" id="recommend">
+                {{ star }} 점
+            </div>
+            <div class="recommend" id="recommend">
+                {{ comment }}
+            </div>
+            <div class="recommend" >
+                <a href="{{ url }}">보러가기</a>
+            </div>
+            
+        </div>
     <div class="desc">
-            <div class="desc_text">
-                <div class="nickname" id="nickname">
-                    {{ nicname }}
-                </div>
-                <div class="recommend" id="recommend">
-                    {{ comment }}
-                </div>
+            
     </div>
 </div>
 

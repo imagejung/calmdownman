@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src=".././static/js/signup.js" defer=""></script>
+    <link rel="stylesheet" href="../static/css/total.css">
     <link rel="stylesheet" href="../static/css/signup.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,7 +16,6 @@
             crossorigin="anonymous"><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script></script>
 
             crossorigin="anonymous"></script>
-            <link rel="stylesheet" href="style.css">
     <script src="../static/js/signup.js"></script>
     <title>회원가입</title>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
@@ -25,12 +25,14 @@
 <body>
 <div class="wrap">
     <div class="title">
-        <h2>회원가입</h2>
-        <div class="textForm">
-            <input type="text" class="id"
+        <h1>회원가입</h1>
+        <div class="id-box">
+        <div class="textForm" id="id-input" style="margin: 0;position: relative;left: 30px;">
+            <input type="text" class="id" 
                        id="r-id" placeholder="아이디">
             </input>
-            <button type="submit" onclick="check()" class="btn btn-primary">중복확인</button>
+        </div>
+        <button type="submit" onclick="check()" class="btn" style="width: 29%; position: relative;left: 60px;">중복확인</button>
         </div>
         <div class="textForm">
             <input type="text" class="id"
@@ -47,7 +49,7 @@
                        id="r-pw2" placeholder="비밀번호 확인">
             </input>
         </div>
-            <button type="submit" onclick="signup()" class="btn btn-primary">회원가입</button>
+            <button type="submit" onclick="signup()" class="btn">회원가입</button>
     </div>
 </div>
 </body>
