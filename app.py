@@ -30,7 +30,6 @@ def login():
     if user is not None:
         if bcrypt.checkpw(pw_receive.encode('UTF-8'), user['pw']) :
             return jsonify({'result': '로그인 성공!'});
-
         else:
             return jsonify({'result': 'pw가 틀렸습니다'});
     else:
@@ -112,6 +111,7 @@ def write_post():
 
     return jsonify({'msg':'저장 완료!'})
 
+
 @app.route("/write/get", methods=["GET"])
 def write_get():
     write_list = list(db.write.find({}, {'_id': False}))
@@ -126,7 +126,6 @@ def detail(num):
     url = db.write.find_one({'num':num})['url']
     num = db.write.find_one({'num':num})['num']
     return render_template('detail.html',num=num, title=title, image=image, comment=comment, star=star, url=url)
-
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5004, debug=True)
