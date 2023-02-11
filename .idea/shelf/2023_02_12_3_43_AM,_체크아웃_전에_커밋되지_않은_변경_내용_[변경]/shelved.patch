@@ -1,0 +1,398 @@
+Index: templates/signup.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!doctype html>\r\n<html lang=\"en\">\r\n\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\r\n    <script src=\".././static/js/signup.js\" defer=\"\"></script>\r\n    <link rel=\"stylesheet\" href=\"../static/css/signup.css\">\r\n\r\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\r\n        integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">\r\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>\r\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js\"\r\n            integrity=\"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM\"\r\n            crossorigin=\"anonymous\"></script>\r\n            <link rel=\"stylesheet\" href=\"style.css\">\r\n    <script src=\"../static/js/signup.js\"></script>\r\n    <title>회원가입</title>\r\n    <link href=\"https://fonts.googleapis.com/css2?family=Jua&display=swap\" rel=\"stylesheet\">\r\n\r\n</head>\r\n\r\n<body>\r\n<div class=\"wrap\">\r\n    <div class=\"title\">\r\n        <h2>회원가입</h2>\r\n        <div class=\"textForm\">\r\n            <input type=\"text\" class=\"id\"\r\n                       id=\"r-id\" placeholder=\"아이디\">\r\n            </input>\r\n            <button type=\"submit\" onclick=\"check()\" class=\"btn btn-primary\">중복확인</button>\r\n        </div>\r\n        <div class=\"textForm\">\r\n            <input type=\"text\" class=\"id\"\r\n                       id=\"r-nick\" placeholder=\"닉네임\">\r\n            </input>\r\n        </div>\r\n        <div class=\"textForm\">\r\n            <input type=\"password\" class=\"id\"\r\n                       id=\"r-pw\" placeholder=\"비밀번호\">\r\n            </input>\r\n        </div>\r\n        <div class=\"textForm\">\r\n            <input type=\"password\" class=\"id\"\r\n                       id=\"r-pw2\" placeholder=\"비밀번호 확인\">\r\n            </input>\r\n        </div>\r\n            <button type=\"submit\" onclick=\"signup()\" class=\"btn btn-primary\">회원가입</button>\r\n    </div>\r\n</div>\r\n</body>\r\n\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/signup.html b/templates/signup.html
+--- a/templates/signup.html	
++++ b/templates/signup.html	
+@@ -6,18 +6,16 @@
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <script src=".././static/js/signup.js" defer=""></script>
+     <link rel="stylesheet" href="../static/css/signup.css">
+-
++    <link rel="stylesheet" href="../static/css/total.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+             crossorigin="anonymous"></script>
+-            <link rel="stylesheet" href="style.css">
+     <script src="../static/js/signup.js"></script>
+     <title>회원가입</title>
+     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+-
+ </head>
+ 
+ <body>
+Index: templates/detail.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n\r\n<html lang=\"ko\">\r\n\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\r\n          integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">\r\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>\r\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js\"\r\n            integrity=\"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM\"\r\n            crossorigin=\"anonymous\"></script>\r\n    <link rel=\"stylesheet\" href=\"//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css\">\r\n    <script\r\n            src=\"https://kit.fontawesome.com/771f34c71f.js\"\r\n            crossorigin=\"anonymous\"\r\n    ></script>\r\n    <link rel=\"stylesheet\" href=\"../static/css/detail.css\">\r\n    <title>상세페이지</title>\r\n</head>\r\n\r\n<body>\r\n<nav class=\"navbar\">\r\n    <div class=\"navbar_logo\">\r\n        <button onclick=\"window.location.href='/'\" type=\"button\" class=\"btn btn-success\" id=\"testest\"><i\r\n                class=\"fas fa-book\"></i> 홈\r\n        </button>\r\n    </div>\r\n    <div class=\"delete\">\r\n        <button id=\"ubutton\" type=\"button\" class=\"btn btn-outline-dark\" onclick=\"update()\">수정</button>\r\n        <button id=\"dbutton\" type=\"button\" class=\"btn btn-outline-dark\" onclick=\"deletepage()\">삭제</button>\r\n    </div>\r\n    <div id=\"num\">{{ num }}</div>\r\n</nav>\r\n<div class=\"wrap\">\r\n    <div class=\"videoinfo\">\r\n        <div class=\"imgbox\">\r\n            <img id=\"bookimg\" class=\"bookimg\" src=\"{{ image }}\" alt=\"thumbnail\">\r\n        </div>\r\n        <div class=\"videodesc\">\r\n            <div id=\"booktitle\">\r\n                {{ title }}\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"desc\">\r\n            <div class=\"desc_text\">\r\n                <div class=\"nickname\" id=\"nickname\">\r\n                    {{ nicname }}\r\n                </div>\r\n                <div class=\"recommend\" id=\"recommend\">\r\n                    {{ comment }}\r\n                </div>\r\n    </div>\r\n</div>\r\n\r\n</body>\r\n\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/detail.html b/templates/detail.html
+--- a/templates/detail.html	
++++ b/templates/detail.html	
+@@ -18,6 +18,7 @@
+             crossorigin="anonymous"
+     ></script>
+     <link rel="stylesheet" href="../static/css/detail.css">
++    <link rel="stylesheet" href="../static/css/total.css">
+     <title>상세페이지</title>
+ </head>
+ 
+Index: templates/login.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\n          integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js\"\n            integrity=\"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM\"\n            crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" href=\"../static/css/login.css\">\n    <script src=\"../static/js/login.js\"></script>\n    <link href=\"https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap\" rel=\"stylesheet\">\n\n    <title>최고 민수야 고마워</title>\n\n    <style>\n\n\n    </style>\n\n    <script>\n    </script>\n\n</head>\n\n\n<body>\n    <div class=\"wrap\">\n        <div class=\"mytitle\">\n            <h1>로그인 페이지</h1>\n            <h5>ID,PW를 입력해주세요</h5>\n        </div>\n        <div class=\"text-area\">\n            <div class=\"mb-3\">\n                <label for=\"login_id\" class=\"form-label\">ID</label>\n                <input type=\"email\" class=\"form-control\" id=\"login_id\" aria-describedby=\"emailHelp\">\n            </div>\n            <div class=\"mb-3\">\n                <label for=\"login_pw\" class=\"form-label\">Password</label>\n                <input type=\"password\" class=\"form-control\" id=\"login_pw\">\n            </div>\n        </div>\n        <div class=\"sign_button\">\n            <button onclick=\"login()\" type=\"button\" class=\"btn btn-secondary\">로그인</button>\n            <button onclick=\"signup()\" type=\"button\" class=\"btn btn-secondary\">회원가입</button>\n        </div>\n    </div>\n</body>\n\n</html>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/login.html b/templates/login.html
+--- a/templates/login.html	
++++ b/templates/login.html	
+@@ -5,7 +5,7 @@
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-
++    <link rel="stylesheet" href="../static/css/total.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+@@ -45,8 +45,8 @@
+                 <input type="password" class="form-control" id="login_pw">
+             </div>
+         </div>
+-        <div class="sign_button">
+-            <button onclick="login()" type="button" class="btn btn-secondary">로그인</button>
++        <div class="sign_button" style="justify-content: center; ">
++            <button onclick="login()" type="button" class="btn btn-secondary" style="">로그인</button>
+             <button onclick="signup()" type="button" class="btn btn-secondary">회원가입</button>
+         </div>
+     </div>
+Index: templates/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <link\r\n      href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\"\r\n      rel=\"stylesheet\"\r\n      integrity=\"sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65\"\r\n      crossorigin=\"anonymous\"\r\n    />\r\n    <script\r\n      src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\"\r\n      integrity=\"sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4\"\r\n      crossorigin=\"anonymous\"\r\n    ></script>\r\n    <link rel=\"shortcut icon\" href=\"../static/img/logo.jpg\" type=\"image/x-icon\">\r\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>\r\n    <script src=\"../static/js/index.js\"></script>\r\n    <link rel=\"stylesheet\" href=\"../static/css/index.css\" />\r\n    <title>추천민수야 고마워!</title>\r\n  </head>\r\n  <body>\r\n    <script>\r\n    </script>\r\n    <!-- navbar -->\r\n    <nav class=\"navbar navbar-expand-lg bg-light\">\r\n      <div class=\"container-md\">\r\n        <a href=\"/\"\r\n          ><img src=\"../static/img/logo.jpg\" alt=\"로고이미지\" width=\"200px\"\r\n        /></a>\r\n        <a\r\n          class=\"btn btn-outline-danger\"\r\n          aria-label=\"logout\"\r\n          onclick=\"sign_out()\"\r\n        >\r\n          로그아웃\r\n        </a>\r\n      </div>\r\n    </nav>\r\n    <!-- header -->\r\n    <div class=\"contents\">\r\n    <div class=\"idx_top\">\r\n      <strong\r\n        >MY Favorite <br />\r\n        Calmdownman</strong\r\n      >\r\n      <p>\r\n        자신이 좋아하는 침착맨 유튜브<br />\r\n        사이트를 추천해보세요!\r\n      </p>\r\n    </div>\r\n    <!-- contents  -->\r\n    <div class=\"btn-wrap\">\r\n      <button type=\"button\" class=\"btn btn-outline-danger\" onclick=\"open_box()\">\r\n        유튜브 링크 기록하기\r\n      </button>\r\n    </div>\r\n    <div class=\"modal\" tabindex=\"-1\" id=\"post-box\">\r\n      <div class=\"modal-dialog\">\r\n        <div class=\"modal-content\">\r\n          <div class=\"modal-header\">\r\n            <h5 class=\"modal-title\">링크를 올리고 별점과 평가를 남겨주세요!</h5>\r\n            <button\r\n              type=\"button\"\r\n              class=\"btn-close\"\r\n              data-bs-dismiss=\"modal\"\r\n              aria-label=\"Close\"\r\n            ></button>\r\n          </div>\r\n          <div class=\"modal-body\">\r\n            <div class=\"form-floating mb-3\">\r\n              <input\r\n                id=\"url\"\r\n                type=\"email\"\r\n                class=\"form-control\"\r\n                placeholder=\"name@example.com\"\r\n              />\r\n              <label> 유튜브 링크 </label>\r\n            </div>\r\n\r\n            <div class=\"input-group mb-3\">\r\n              <label class=\"input-group-text\" for=\"inputGroupSelect01\"\r\n                >별점</label\r\n              >\r\n              <select class=\"form-select\" id=\"star\">\r\n                <option selected>-- 별점 --</option>\r\n                <option value=\"1\">⭐</option>\r\n                <option value=\"2\">⭐⭐</option>\r\n                <option value=\"3\">⭐⭐⭐</option>\r\n                <option value=\"4\">⭐⭐⭐⭐</option>\r\n                <option value=\"5\">⭐⭐⭐⭐⭐</option>\r\n              </select>\r\n            </div>\r\n\r\n            <div class=\"form-floating\">\r\n              <textarea\r\n                id=\"comment\"\r\n                class=\"form-control\"\r\n                placeholder=\"Leave a comment here\"\r\n              ></textarea>\r\n              <label for=\"floatingTextarea2\"> 평가 </label>\r\n            </div>\r\n          </div>\r\n          <div class=\"modal-footer\">\r\n            <button onclick=\"posting()\" type=\"button\" class=\"btn btn-dark\">\r\n              기록하기\r\n            </button>\r\n            <button\r\n              onclick=\"close_box()\"\r\n              type=\"button\"\r\n              class=\"btn btn-outline-dark\"\r\n            >\r\n              닫기\r\n            </button>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"mycards\">\r\n      <div class=\"row row-cols-1 row-cols-md-4 g-4\" id=\"cards-box\"></div>\r\n    </div>\r\n  </body>\r\n</div>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/index.html b/templates/index.html
+--- a/templates/index.html	
++++ b/templates/index.html	
+@@ -4,6 +4,7 @@
+     <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <link rel="stylesheet" href="../static/css/total.css">
+     <link
+       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+       rel="stylesheet"
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.8\" project-jdk-type=\"Python SDK\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,4 +1,4 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (calmdownman)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"0a3093a3-8c68-4714-bf3a-d3109baa57b6\" name=\"변경\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/.idea/.gitignore\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/Calmdownman.iml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/app.py\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/static/css/index.css\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/static/css/signup.css\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/static/img/banner.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/static/img/banner2.jpg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/static/img/logo.jpg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/static/js/index.js\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/static/js/signup.js\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/templates/detail.html\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/templates/index.html\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/templates/signup.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/README.md\" beforeDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FlaskConsoleOptions\" custom-start-script=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\">\n    <envs>\n      <env key=\"FLASK_APP\" value=\"app\" />\n    </envs>\n    <option name=\"myCustomStartScript\" value=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\" />\n    <option name=\"myEnvs\">\n      <map>\n        <entry key=\"FLASK_APP\" value=\"app\" />\n      </map>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2LaXstDq86Ql775jOUNucrcIzGr\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/lead729726/calmdownman&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$APPLICATION_CONFIG_DIR$/scratches\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Python.app.py\">\n    <configuration default=\"true\" type=\"PythonConfigurationType\" factoryName=\"Python\">\n      <module name=\"calmdownman\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"app\" type=\"PythonConfigurationType\" factoryName=\"Python\" nameIsGenerated=\"true\">\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"/usr/bin/python3\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <module name=\"\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/app.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"app.py\" type=\"PythonConfigurationType\" factoryName=\"Python\">\n      <module name=\"Calmdownman\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/app.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <list>\n      <item itemvalue=\"Python.app\" />\n      <item itemvalue=\"Python.app.py\" />\n      <item itemvalue=\"Python.calmdownman\" />\n    </list>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"애플리케이션 수준\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"디폴트 작업\">\n      <changelist id=\"0a3093a3-8c68-4714-bf3a-d3109baa57b6\" name=\"변경\" comment=\"\" />\n      <created>1676110377703</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1676110377703</updated>\n      <workItem from=\"1676110379347\" duration=\"2307000\" />\n      <workItem from=\"1676113096276\" duration=\"4739000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\n    <SUITE FILE_PATH=\"coverage/calmdownman$calmdownman.coverage\" NAME=\"calmdownman 커버리지 결과\" MODIFIED=\"1676113392431\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\n    <SUITE FILE_PATH=\"coverage/calmdownman$app_py.coverage\" NAME=\"app.py 커버리지 결과\" MODIFIED=\"1676116410426\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -5,31 +5,28 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="0a3093a3-8c68-4714-bf3a-d3109baa57b6" name="변경" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/Calmdownman.iml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/static/css/signup.css" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/static/img/banner.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/static/img/banner2.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/static/img/logo.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/static/js/index.js" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/static/js/signup.js" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/templates/detail.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
++      <change afterPath="$PROJECT_DIR$/static/css/total.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/Calmdownman.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Calmdownman.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detail.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="CSS File" />
++      </list>
++    </option>
++  </component>
+   <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+     <envs>
+       <env key="FLASK_APP" value="app" />
+@@ -48,43 +45,37 @@
+     <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProjectId" id="2LaXstDq86Ql775jOUNucrcIzGr" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/Users/lead729726/calmdownman&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+-  }
+-}</component>
++  <component name="PropertiesComponent">
++    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
++    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
++    <property name="WebServerToolWindowFactoryState" value="false" />
++    <property name="list.type.of.created.stylesheet" value="CSS" />
++  </component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$APPLICATION_CONFIG_DIR$/scratches" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Python.app.py">
+-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+-      <module name="calmdownman" />
++  <component name="RunManager" selected="Flask 서버.Flask (app.py)">
++    <configuration name="app" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+       <envs>
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+-      <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="" />
++      <option name="SDK_HOME" value="/usr/bin/python3" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+       <option name="IS_MODULE_SDK" value="false" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
++      <module name="" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+-      <option name="SCRIPT_NAME" value="" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -93,18 +84,18 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
++    <configuration name="app.py" type="PythonConfigurationType" factoryName="Python">
++      <module name="Calmdownman" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+       <envs>
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+-      <option name="SDK_HOME" value="/usr/bin/python3" />
++      <option name="SDK_HOME" value="" />
+       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+-      <option name="IS_MODULE_SDK" value="false" />
++      <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <module name="" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+       <option name="PARAMETERS" value="" />
+@@ -115,33 +106,32 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="app.py" type="PythonConfigurationType" factoryName="Python">
++    <configuration name="Flask (app.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+       <module name="Calmdownman" />
++      <option name="target" value="$PROJECT_DIR$/app.py" />
++      <option name="targetType" value="PATH" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+-      <envs>
+-        <env name="PYTHONUNBUFFERED" value="1" />
+-      </envs>
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
++      <option name="WORKING_DIRECTORY" value="" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+-      <option name="PARAMETERS" value="" />
+-      <option name="SHOW_COMMAND_LINE" value="false" />
+-      <option name="EMULATE_TERMINAL" value="false" />
+-      <option name="MODULE_MODE" value="false" />
+-      <option name="REDIRECT_INPUT" value="false" />
+-      <option name="INPUT_FILE" value="" />
++      <option name="launchJavascriptDebuger" value="false" />
+       <method v="2" />
+     </configuration>
+     <list>
+       <item itemvalue="Python.app" />
+       <item itemvalue="Python.app.py" />
+       <item itemvalue="Python.calmdownman" />
++      <item itemvalue="Flask 서버.Flask (app.py)" />
+     </list>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Flask 서버.Flask (app.py)" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -153,6 +143,7 @@
+       <updated>1676110377703</updated>
+       <workItem from="1676110379347" duration="2307000" />
+       <workItem from="1676113096276" duration="4739000" />
++      <workItem from="1676136384370" duration="3523000" />
+     </task>
+     <servers />
+   </component>
+@@ -171,6 +162,8 @@
+     </option>
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/calmdownman$Flask__app_py_.coverage" NAME="Flask (app.py) 커버리지 결과" MODIFIED="1676137749966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++    <SUITE FILE_PATH="coverage/calmdownman$app.coverage" NAME="app 커버리지 결과" MODIFIED="1676126654206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+     <SUITE FILE_PATH="coverage/calmdownman$calmdownman.coverage" NAME="calmdownman 커버리지 결과" MODIFIED="1676113392431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+     <SUITE FILE_PATH="coverage/calmdownman$app_py.coverage" NAME="app.py 커버리지 결과" MODIFIED="1676116410426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+   </component>
+Index: .idea/Calmdownman.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"PYTHON_MODULE\" version=\"4\">\n  <component name=\"Flask\">\n    <option name=\"enabled\" value=\"true\" />\n  </component>\n  <component name=\"NewModuleRootManager\">\n    <content url=\"file://$MODULE_DIR$\">\n      <excludeFolder url=\"file://$MODULE_DIR$/.venv\" />\n    </content>\n    <orderEntry type=\"inheritedJdk\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n  </component>\n  <component name=\"TemplatesService\">\n    <option name=\"TEMPLATE_CONFIGURATION\" value=\"Jinja2\" />\n    <option name=\"TEMPLATE_FOLDERS\">\n      <list>\n        <option value=\"$MODULE_DIR$/templates\" />\n      </list>\n    </option>\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/Calmdownman.iml b/.idea/Calmdownman.iml
+--- a/.idea/Calmdownman.iml	
++++ b/.idea/Calmdownman.iml	
+@@ -7,7 +7,7 @@
+     <content url="file://$MODULE_DIR$">
+       <excludeFolder url="file://$MODULE_DIR$/.venv" />
+     </content>
+-    <orderEntry type="inheritedJdk" />
++    <orderEntry type="jdk" jdkName="Python 3.8 (calmdownman)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+   <component name="TemplatesService">
+Index: static/css/total.css
+===================================================================
+diff --git a/static/css/total.css b/static/css/total.css
+new file mode 100644
+--- /dev/null	
++++ b/static/css/total.css	
+@@ -0,0 +1,10 @@
++@font-face {
++    font-family: 'OKGUNG';
++    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKGUNG.woff2') format('woff2');
++    font-weight: normal;
++    font-style: normal;
++}
++
++*{
++    font-family:  'OKGUNG', sans-serif;
++}
+\ No newline at end of file
+Index: static/css/login.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>* {\n  font-family: \"Gowun Dodum\", sans-serif;\n}\n\n.wrap {\n  margin: 50px auto;\n  width: 350px;\n  border-radius: 10px;\n  padding: 25px;\n  box-shadow: 0px 0px 3px 0px gray;\n}\n\n.mytitle {\n  color: white;\n  width: 300px;\n  height: 400px;\n  background-image: url(\"https://w.namu.la/s/2cd5110fc9e9e2f8c67f05fa5fb1d7f20957a29c80203d0c63864960640fd8b7d618ee394c9efb04d0da86512ea9a7b6a9adb7422ea2c82051286c31c975c335851b8adf995afce3cc1101ce5b98f58791df742782d870d3e5085a0dcd5d45d0\");\n  background-position: center;\n  background-size: cover;\n\n  border-radius: 10px;\n  text-align: center;\n  padding-top: 40px;\n}\n\n.text-area {\n  margin: 10px auto;\n}\n
+===================================================================
+diff --git a/static/css/login.css b/static/css/login.css
+--- a/static/css/login.css	
++++ b/static/css/login.css	
+@@ -1,28 +1,26 @@
+-* {
+-  font-family: "Gowun Dodum", sans-serif;
++body {
++  background-image: url("https://w.namu.la/s/2cd5110fc9e9e2f8c67f05fa5fb1d7f20957a29c80203d0c63864960640fd8b7d618ee394c9efb04d0da86512ea9a7b6a9adb7422ea2c82051286c31c975c335851b8adf995afce3cc1101ce5b98f58791df742782d870d3e5085a0dcd5d45d0");
+ }
+ 
+ .wrap {
+   margin: 50px auto;
+-  width: 350px;
++  width: 400px;
+   border-radius: 10px;
+   padding: 25px;
++  background-color: white;
+   box-shadow: 0px 0px 3px 0px gray;
+ }
+ 
+ .mytitle {
+-  color: white;
++  color: black;
+   width: 300px;
+-  height: 400px;
+-  background-image: url("https://w.namu.la/s/2cd5110fc9e9e2f8c67f05fa5fb1d7f20957a29c80203d0c63864960640fd8b7d618ee394c9efb04d0da86512ea9a7b6a9adb7422ea2c82051286c31c975c335851b8adf995afce3cc1101ce5b98f58791df742782d870d3e5085a0dcd5d45d0");
++  height: 200px;
++  margin: auto;
++  padding-top: 50px;
++
+   background-position: center;
+   background-size: cover;
+ 
+   border-radius: 10px;
+   text-align: center;
+-  padding-top: 40px;
+-}
+-
+-.text-area {
+-  margin: 10px auto;
+-}
++}
+\ No newline at end of file
