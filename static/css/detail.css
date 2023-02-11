@@ -1,26 +1,18 @@
-@font-face {
-    font-family: 'NEXON Lv1 Gothic OTF';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'KyoboHandwriting2020A';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
 * {
-    font-family: 'NEXON Lv1 Gothic OTF', sans-serif;
-    background-color: #d7ccc8
+    background-color: antiquewhite;
 }
 
-
+a {
+    text-decoration: none;
+    }
 .bookinfo {
     margin-left: 20px;
     /* border: 1px solid black; */
+}
+
+i{
+    background-color: transparent;
 }
 
 .imgbox {
@@ -42,7 +34,7 @@
 }
 
 #booktitle {
-    font-size: 23px;
+    font-size: 35px;
     margin-bottom: 10px;
     font-weight: bold;
     text-align: center;
@@ -68,22 +60,27 @@ word-break: keep-all;
 word-wrap: normal;
 }
 
-.nickname {
-    margin-bottom: 10px;
+.star {
     background-color: transparent;
-    font-size: 20px;
-    font-family: 'KyoboHandwriting2020A';
+    font-size: 30px;
     width: 80%;
-
+    margin: auto;
+    text-align: center;
+    word-break: keep-all;
+    word-wrap: normal;
 }
+
 
 .recommend {
     background-color: transparent;
     font-size: 25px;
-    font-family: 'KyoboHandwriting2020A';
     width: 80%;
-
+    margin: auto;
+    text-align: center;
+    word-break: keep-all;
+    word-wrap: normal;
 }
+
 
 .comment {
     display: flex;
