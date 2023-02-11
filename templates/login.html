@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <title>최고 민수야 고마워</title>
+
+    <style>
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .wrap {
+            margin:50px auto;
+            width: 350px;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0px 0px 3px 0px gray;
+        }
+
+        .mytitle {
+            color: white;
+            width: 300px;
+            height: 400px;
+            background-image: url('https://w.namu.la/s/2cd5110fc9e9e2f8c67f05fa5fb1d7f20957a29c80203d0c63864960640fd8b7d618ee394c9efb04d0da86512ea9a7b6a9adb7422ea2c82051286c31c975c335851b8adf995afce3cc1101ce5b98f58791df742782d870d3e5085a0dcd5d45d0');
+            background-position: center;
+            background-size: cover;
+
+
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .text-area {
+            margin: 10px auto;
+        }
+
+        .sign_button{
+
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+        });
+
+        function login() {
+            $.ajax({
+                type: "POST",
+                url: "/login",
+                data: {
+                    id_give : $('#login_id').val(),
+                    pw_give : $('#login_pw').val()},
+                success: function (response) {
+                    alert(response["msg"])
+                        window.location.href = '/index'
+
+
+                }
+            });
+        }
+        function login() {
+            $.ajax({
+                type: "POST",
+                url: "/login",
+                data: {
+                    id_give : $('#login_id').val(),
+                    pw_give : $('#login_pw').val()},
+
+                success: function (response) {
+                    if (response['result'] == '로그인 성공!') {
+                        alert(response['result'])
+                        window.location.href = '/index'
+                    }
+                    else {
+                        alert(response['result'])
+                    }
+
+
+                }
+            });
+        }
+
+        function signup() {
+                    window.location.href = '/signup'
+        }
+    </script>
+
+</head>
+
+
+<body>
+    <div class="wrap">
+        <div class="mytitle">
+            <h1>로그인 페이지</h1>
+            <h5>ID,PW를 입력해주세요</h5>
+        </div>
+        <div class="text-area">
+            <div class="mb-3">
+                <label for="login_id" class="form-label">ID</label>
+                <input type="email" class="form-control" id="login_id" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="login_pw" class="form-label">Password</label>
+                <input type="password" class="form-control" id="login_pw">
+            </div>
+        </div>
+        <div class="sign_button">
+            <button onclick="login()" type="button" class="btn btn-secondary">로그인</button>
+            <button onclick="signup()" type="button" class="btn btn-secondary">회원가입</button>
+        </div>
+    </div>
+</body>
+
+</html>
+</html>
