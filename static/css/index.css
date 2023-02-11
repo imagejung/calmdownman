@@ -1,0 +1,118 @@
+.navbar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.banner {
+  display: flex;
+  justify-content: end;
+}
+.idx_top {
+  width: 100%;
+  height: 500px;
+  background: url(../img/banner2.jpg) no-repeat no-repeat 40% 70% / cover;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.idx_top strong,
+.idx_top p {
+  margin-left: 50px;
+  color: white;
+  text-align: center;
+}
+.idx_top strong {
+  font-size: 60px;
+}
+.idx_top p {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.mytitle {
+  width: 100%;
+  height: 250px;
+
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg");
+  background-position: center;
+  background-size: cover;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mytitle > button {
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  color: white;
+
+  border-radius: 50px;
+  border: 1px solid white;
+
+  margin-top: 10px;
+}
+
+.mytitle > button:hover {
+  border: 2px solid white;
+}
+
+.mycomment {
+  color: gray;
+}
+
+.mycards {
+  margin: 20px auto 0px auto;
+  width: 95%;
+  max-width: 1200px;
+}
+
+.mypost {
+  width: 95%;
+  max-width: 500px;
+  margin: 20px auto 0px auto;
+  padding: 20px;
+  box-shadow: 0px 0px 3px 0px gray;
+
+  display: none;
+}
+
+.mybtns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+}
+
+.mybtns > button {
+  margin-right: 10px;
+}
+
+.btn-wrap {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.has-text-centered {
+  cursor: pointer;
+}
+.contents {
+  background-color: antiquewhite;
+}
