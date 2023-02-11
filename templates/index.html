@@ -18,101 +18,18 @@
     <link rel="shortcut icon" href="../static/img/logo.jpg" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="../static/js/index.js"></script>
     <link rel="stylesheet" href="../static/css/index.css" />
     <title>추천민수야 고마워!</title>
   </head>
   <body>
-    <script>
-      $(document).ready(function () {
-        localStorage.getItem("login_token");
-
-          listing();
-      });
-
-      function listing() {
-        $.ajax({
-          type: "GET",
-          url: "/write/get",
-          data: {},
-          success: function (response) {
-            let rows = response["write_get"];
-            for (let i = 0; i < rows.length; i++) {
-              let title = rows[i]["title"];
-              let image = rows[i]["image"];
-              let comment = rows[i]["comment"];
-              let star = rows[i]["star"];
-              let num = rows[i]["num"];
-              let url = rows[i]["url"];
-              let star_image = "⭐".repeat(star);
-
-              let temp_html = `
-                <div class="col" id="detailBox">
-                  <div class="card h-100">
-                    <a href="/detail/${num}" >
-                        <img src="${image}" class="card-img-top" >
-                        <div class="card-body">
-                          <h5 class="card-title">${title}</h5>
-                          <p>${star_image}</p>
-                          <p class="mycomment">${comment}</p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              `;
-
-              $("#cards-box").append(temp_html);
-            }
-          },
-        });
-      }
-      $('#detailbox').on('click', function({num}){
-        location.href = "/detail/" + num
-      })
-
-      function posting() {
-        let url_p = $("#url").val();
-        let comment_p = $("#comment").val();
-        let star_p = $("#star").val();
-
-        $.ajax({
-          type: "POST",
-          url: "/write/post",
-          data: { url_give: url_p, comment_give: comment_p, star_give: star_p },
-          success: function (response) {
-            alert(response["msg"]);
-            window.location.reload();
-          },
-        });
-      }
-
-      function open_box() {
-        $("#post-box").show();
-      }
-
-      function close_box() {
-        $("#post-box").hide();
-      }
-
-      function sign_out() {
-          $.removeCookie('mytoken');
-        alert("로그아웃!");
-        window.location.href = "/";
-      }
-    </script>
-
+   
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-md">
         <a href="/"
           ><img src="../static/img/logo.jpg" alt="로고이미지" width="200px"
         /></a>
-          <a
-          class="btn btn-outline-danger"
-          aria-label="logout"
-        >
-          $('logined_user')
-        </a>
         <a
           class="btn btn-outline-danger"
           aria-label="logout"

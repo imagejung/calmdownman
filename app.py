@@ -135,6 +135,7 @@ def write_post():
 
     return jsonify({'msg':'저장 완료!'})
 
+
 @app.route("/write/get", methods=["GET"])
 def write_get():
     write_list = list(db.write.find({}, {'_id': False}))

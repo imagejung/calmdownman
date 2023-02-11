@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -14,18 +13,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js">
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/static/detailpage.css"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <script
             src="https://kit.fontawesome.com/771f34c71f.js"
             crossorigin="anonymous"
     ></script>
-
-    <link rel="stylesheet" href="/static/total.css">
     <link rel="stylesheet" href="../static/css/detail.css">
-
     <title>상세페이지</title>
-
 </head>
 
 <body>
@@ -60,59 +54,10 @@
                 <div class="recommend" id="recommend">
                     {{ comment }}
                 </div>
-            <div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        An item
-                        <button type="button" class="btn btn-primary position-relative">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                              99+
-                              <span class="visually-hidden">unread messages</span>
-                            </span>
-                          </button>
-                    </li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                    <li class="list-group-item">A fourth item</li>
-                    <li class="list-group-item">And a fifth one</li>
-                  </ul>
-            </div>
-            </div>
-        </div>
     </div>
 </div>
 
-<script>
-    $(document).ready(function () {
-        localStorage.getItem("login_token");
-      });
 
-    let num = document.getElementById('num').textContent
-
-    function update() {
-        window.open("/updatepage/" + num, "a", "width=1000, height=800, left=100, top=50");
-    }
-
-    
-    function deletepage(param) {
-        $.ajax({
-            type: "DELETE",
-            url: "/detailpage",
-            data: {num: num},
-            success: function (response) {
-                alert(response['msg'])
-                console.log()
-                location.href = "/"
-            }
-        })
-    }
-
-</script>
 </body>
 
 </html>
