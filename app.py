@@ -1,39 +1,63 @@
-import certifi
-import bcrypt
-import jwt
-
-from pymongo import MongoClient
-
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for, session
 
 app = Flask(__name__)
+
+SECRET_KEY = 'SPARTA'
+
+from pymongo import MongoClient
+import certifi
 
 import requests
 from bs4 import BeautifulSoup
 
-from datetime import timedelta
-
 ca = certifi.where()
+
 client = MongoClient('mongodb+srv://test:sparta@cluster0.0x2me9v.mongodb.net/?retryWrites=true&w=majority', tlsCAFile=ca)
 db = client.cdm
+
+import jwt
+import hashlib
+import datetime
 
 @app.route('/')
 def home():
     return render_template('login.html')
 
-@app.route('/login', methods=['POST'])
-def login():
+    token_receive = request.cookies.get('mytoken')
+    try:
+        payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
+        user_info = db.user.find_one({"id": payload['id']})
+        return render_template('index.html', nickname=user_info["nick"])
+    except jwt.ExpiredSignatureError:
+        return redirect(url_for("login", msg="로그인 시간이 만료되었습니다."))
+    except jwt.exceptions.DecodeError:
+        return redirect(url_for("login", msg="로그인 정보가 존재하지 않습니다."))
+
+
+@app.route('/api/login', methods=['POST'])
+def api_login():
     id_receive = request.form['id_give']
     pw_receive = request.form['pw_give']
 
-    user = db.user.find_one({'id': id_receive})
-    if user is not None:
-        if bcrypt.checkpw(pw_receive.encode('UTF-8'), user['pw']) :
-            return jsonify({'result': '로그인 성공!'});
-        else:
-            return jsonify({'result': 'pw가 틀렸습니다'});
+    pw_hash = hashlib.sha256(pw_receive.encode('utf-8')).hexdigest()
+
+    result = db.user.find_one({'id': id_receive, 'pw': pw_hash})
+
+    if result is not None:
+
+        payload = {
+            'id': id_receive,
+            'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=5)
+        }
+
+        token = jwt.encode(payload, SECRET_KEY, algorithm='HS256')
+
+
+        # token을 줍니다.
+        return jsonify({'result': 'success', 'token': token})
+    # 찾지 못하면
     else:
-        return jsonify({'result': 'id가 틀렸습니다'});
+        return jsonify({'result': 'fail', 'msg': '아이디/비밀번호가 일치하지 않습니다.'})
 
 @app.route('/signup')
 def signup():
@@ -46,18 +70,18 @@ def signup_new():
     pw_receive = request.form['pw_give']
     pw_pw_receive = request.form['pw_pw_give']
 
+    pw_hash = hashlib.sha256(pw_receive.encode('utf-8')).hexdigest()
+
+
     if pw_receive != pw_pw_receive:
         return jsonify({'msg': '패스워드가 일치하지 않습니다!'})
     else:
-        encoded_pw_receive = pw_receive.encode('utf-8')
-        final_password = bcrypt.hashpw(encoded_pw_receive, bcrypt.gensalt())
 
-        db.user.insert_one({'id': id_receive, 'pw': final_password, 'nick': nickname_receive})
+        db.user.insert_one({'id': id_receive, 'pw': pw_hash, 'nick': nickname_receive})
 
         return jsonify({'result': 'success'})
 
 
-# ID 중복확인
 @app.route('/signup/check', methods=['POST'])
 def signup_check():
     id_receive = request.form['id_give']
@@ -127,5 +151,29 @@ def detail(num):
     num = db.write.find_one({'num':num})['num']
     return render_template('detail.html',num=num, title=title, image=image, comment=comment, star=star, url=url)
 
+@app.route('/api/nick', methods=['GET'])
+def api_valid():
+    token_receive = request.cookies.get('mytoken')
+
+    # try / catch 문?
+    # try 아래를 실행했다가, 에러가 있으면 except 구분으로 가란 얘기입니다.
+
+    try:
+        # token을 시크릿키로 디코딩합니다.
+        # 보실 수 있도록 payload를 print 해두었습니다. 우리가 로그인 시 넣은 그 payload와 같은 것이 나옵니다.
+        payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
+        print(payload)
+
+        # payload 안에 id가 들어있습니다. 이 id로 유저정보를 찾습니다.
+        # 여기에선 그 예로 닉네임을 보내주겠습니다.
+        userinfo = db.user.find_one({'id': payload['id']}, {'_id': 0})
+        return jsonify({'result': 'success', 'nickname': userinfo['nick']})
+    except jwt.ExpiredSignatureError:
+        # 위를 실행했는데 만료시간이 지났으면 에러가 납니다.
+        return jsonify({'result': 'fail', 'msg': '로그인 시간이 만료되었습니다.'})
+    except jwt.exceptions.DecodeError:
+        return jsonify({'result': 'fail', 'msg': '로그인 정보가 존재하지 않습니다.'})
+
+
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=5004, debug=True)
+    app.run('0.0.0.0', port=5000, debug=True)

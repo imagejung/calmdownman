@@ -25,8 +25,7 @@ function check(){
         type: "POST",
         url: "/signup/check",
         data: {
-            id_give : $('#r-id').val()
-        },
+            id_give : $('#r-id').val()},
         success: function (response) {
             if (response['result'] == 'success') {
                 alert('사용 가능한 아이디 입니다!')
